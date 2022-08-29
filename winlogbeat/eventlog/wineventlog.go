@@ -15,6 +15,7 @@
 // specific language governing permissions and limitations
 // under the License.
 
+//go:build windows
 // +build windows
 
 package eventlog
@@ -282,6 +283,7 @@ func (l *winEventLog) Close() error {
 	debugf("%s Closing handle", l.logPrefix)
 	if l.cache != nil && l.cache.cache != nil {
 		l.cache.cache.StopJanitor()
+		l.cache = nil
 	}
 	return win.Close(l.subscription)
 }
