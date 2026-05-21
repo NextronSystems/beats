@@ -386,22 +386,6 @@ func newWinEventLog(options *common.Config) (EventLog, error) {
 		return nil, err
 	}
 
-	eventMetadataHandle := func(providerName, sourceName string) sys.MessageFiles {
-		mf := sys.MessageFiles{SourceName: sourceName}
-		h, err := win.OpenPublisherMetadata(0, sourceName, 0)
-		if err != nil {
-			mf.Err = err
-			return mf
-		}
-
-		mf.Handles = []sys.FileHandle{{Handle: uintptr(h)}}
-		return mf
-	}
-
-	freeHandle := func(handle uintptr) error {
-		return win.Close(win.EvtHandle(handle))
-	}
-
 	if filepath.IsAbs(c.Name) {
 		c.Name = filepath.Clean(c.Name)
 	}
@@ -414,23 +398,11 @@ func newWinEventLog(options *common.Config) (EventLog, error) {
 		maxRead:     c.BatchReadSize,
 		renderBuf:   make([]byte, renderBufferSize),
 		outputBuf:   sys.NewByteBuffer(renderBufferSize),
-		cache:       newMessageFilesCache(c.Name, eventMetadataHandle, freeHandle),
 		logPrefix:   fmt.Sprintf("WinEventLog[%s]", c.Name),
 	}
 
-	// Forwarded events should be rendered using RenderEventXML. It is more
-	// efficient and does not attempt to use local message files for rendering
-	// the event's message.
-	switch {
-	case c.Forwarded == nil && c.Name == "ForwardedEvents",
-		c.Forwarded != nil && *c.Forwarded == true:
-		l.render = func(event win.EvtHandle, out io.Writer) error {
-			return win.RenderEventXML(event, l.renderBuf, out)
-		}
-	default:
-		l.render = func(event win.EvtHandle, out io.Writer) error {
-			return win.RenderEvent(event, 0, l.renderBuf, l.cache.get, out)
-		}
+	l.render = func(event win.EvtHandle, out io.Writer) error {
+		return win.RenderEventXML(event, l.renderBuf, out)
 	}
 
 	return l, nil
