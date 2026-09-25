@@ -22,7 +22,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
 )
 
 func TestEmit(t *testing.T) {

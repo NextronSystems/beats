@@ -23,7 +23,7 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
 )
 
 type mapper map[string]map[string]Featurable

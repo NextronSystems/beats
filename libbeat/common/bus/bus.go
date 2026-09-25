@@ -20,8 +20,8 @@ package bus
 import (
 	"sync"
 
-	"github.com/secDre4mer/beats/v7/libbeat/common"
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/libbeat/common"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
 )
 
 // Event sent to the bus

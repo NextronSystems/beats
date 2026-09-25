@@ -36,8 +36,8 @@ import (
 
 	"go.elastic.co/ecszap"
 
-	"github.com/secDre4mer/beats/v7/libbeat/common/file"
-	"github.com/secDre4mer/beats/v7/libbeat/paths"
+	"github.com/NextronSystems/beats/v7/libbeat/common/file"
+	"github.com/NextronSystems/beats/v7/libbeat/paths"
 )
 
 var (

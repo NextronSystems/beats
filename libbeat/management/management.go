@@ -22,10 +22,10 @@ import (
 
 	"github.com/gofrs/uuid"
 
-	"github.com/secDre4mer/beats/v7/libbeat/common"
-	"github.com/secDre4mer/beats/v7/libbeat/common/reload"
-	"github.com/secDre4mer/beats/v7/libbeat/feature"
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/libbeat/common"
+	"github.com/NextronSystems/beats/v7/libbeat/common/reload"
+	"github.com/NextronSystems/beats/v7/libbeat/feature"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
 )
 
 // Status describes the current status of the beat.

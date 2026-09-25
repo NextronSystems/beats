@@ -26,7 +26,7 @@ import (
 	"fmt"
 	"io/ioutil"
 
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
 )
 
 const logSelector = "tls"

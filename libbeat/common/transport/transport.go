@@ -21,7 +21,7 @@ import (
 	"errors"
 	"net"
 
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
 )
 
 type Dialer interface {

@@ -20,8 +20,8 @@ package keystore
 import (
 	"errors"
 
-	"github.com/secDre4mer/beats/v7/libbeat/common"
-	"github.com/secDre4mer/beats/v7/libbeat/common/bus"
+	"github.com/NextronSystems/beats/v7/libbeat/common"
+	"github.com/NextronSystems/beats/v7/libbeat/common/bus"
 	"github.com/elastic/go-ucfg"
 	"github.com/elastic/go-ucfg/parse"
 )

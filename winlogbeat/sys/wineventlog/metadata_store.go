@@ -28,8 +28,8 @@ import (
 	"github.com/pkg/errors"
 	"go.uber.org/multierr"
 
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
-	"github.com/secDre4mer/beats/v7/winlogbeat/sys"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/winlogbeat/sys"
 )
 
 var (

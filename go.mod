@@ -1,4 +1,4 @@
-module github.com/secDre4mer/beats/v7
+module github.com/NextronSystems/beats/v7
 
 go 1.14
 

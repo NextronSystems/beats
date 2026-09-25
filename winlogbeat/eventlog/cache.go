@@ -24,9 +24,9 @@ import (
 	"expvar"
 	"time"
 
-	"github.com/secDre4mer/beats/v7/libbeat/common"
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
-	"github.com/secDre4mer/beats/v7/winlogbeat/sys"
+	"github.com/NextronSystems/beats/v7/libbeat/common"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/winlogbeat/sys"
 )
 
 // Stats for the message file caches.

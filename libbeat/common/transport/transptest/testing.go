@@ -31,8 +31,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/secDre4mer/beats/v7/libbeat/common/transport"
-	"github.com/secDre4mer/beats/v7/libbeat/common/transport/tlscommon"
+	"github.com/NextronSystems/beats/v7/libbeat/common/transport"
+	"github.com/NextronSystems/beats/v7/libbeat/common/transport/tlscommon"
 )
 
 type MockServer struct {

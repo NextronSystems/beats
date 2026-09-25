@@ -28,7 +28,7 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
 )
 
 var textMarshalerType = reflect.TypeOf((*encoding.TextMarshaler)(nil)).Elem()

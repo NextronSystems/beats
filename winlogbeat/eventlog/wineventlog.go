@@ -32,11 +32,11 @@ import (
 	"github.com/pkg/errors"
 	"golang.org/x/sys/windows"
 
-	"github.com/secDre4mer/beats/v7/libbeat/common"
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
-	"github.com/secDre4mer/beats/v7/winlogbeat/checkpoint"
-	"github.com/secDre4mer/beats/v7/winlogbeat/sys"
-	win "github.com/secDre4mer/beats/v7/winlogbeat/sys/wineventlog"
+	"github.com/NextronSystems/beats/v7/libbeat/common"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/winlogbeat/checkpoint"
+	"github.com/NextronSystems/beats/v7/winlogbeat/sys"
+	win "github.com/NextronSystems/beats/v7/winlogbeat/sys/wineventlog"
 )
 
 const (

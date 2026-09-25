@@ -33,8 +33,8 @@ import (
 	"go.uber.org/multierr"
 	"golang.org/x/sys/windows"
 
-	"github.com/secDre4mer/beats/v7/libbeat/logp"
-	"github.com/secDre4mer/beats/v7/winlogbeat/sys"
+	"github.com/NextronSystems/beats/v7/libbeat/logp"
+	"github.com/NextronSystems/beats/v7/winlogbeat/sys"
 )
 
 const (
